@@ -71,7 +71,6 @@ def initialize_session_state():
 def display_message(role: str, content: str, model: str = None):
     avatar, name = AVATARS.get(model, AVATARS["user"])
     with st.chat_message(role, avatar=avatar):
-        print(name)
         st.markdown(f"**{name}**: {content}")
 
 def display_scores():
@@ -93,7 +92,7 @@ def display_final_scores():
         st.markdown(f"**第{rank}位**: {avatar} {name} - {score}点")
 
 def main():
-    st.title("AI")
+    st.title("AI大喜利")
     initialize_session_state()
     
     # サイドバーの設定
